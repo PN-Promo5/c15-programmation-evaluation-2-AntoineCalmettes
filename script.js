@@ -3,18 +3,18 @@
 
 function displayInterface(arrayMain) { // I create my function that will generate a graphical interface
   let containerMain = document.createElement("section"); // Create section in variable containerMain
-  document.body.appendChild(containerMain);
+  document.body.appendChild(containerMain); // I add in body
 
   let createH1 = document.createElement("h1") // Create h1 in variable createH1
   createH1.textContent = "Cinéma Le Dauphin"; // I give a value
-  containerMain.appendChild(createH1);
+  containerMain.appendChild(createH1); // I add in container
 
-  let createP = document.createElement("p")
+  let createP = document.createElement("p") // Create P in variable createP
   createP.textContent = "Une salle de cinéma grand confort, un restaurant et unesélection de vins de qualité. Des avant premières, desrencontres, des ciné-repas, des débats, des ateliers,des ciné-goûters, de 11h30 à 23h du mardi audimanche (jusqu’à minuit le vendredi et le samedi)."; //I give a value
-  containerMain.appendChild(createP);
+  containerMain.appendChild(createP); // I add in container
 
-  let elementInputButton = document.createElement("input")
-  document.body.appendChild(elementInputButton)
+  let elementInputButton = document.createElement("input") // Create input Button
+  document.body.appendChild(elementInputButton) // I add in body
   elementInputButton.type = "button" // It is a button
   elementInputButton.value = "Voir les films à l’affiche cette semaine" //I give a value
 
@@ -35,19 +35,18 @@ let arrayMovieInfos = [ // Create array
 
 
 function createTableOfArray(arrayMain) { // Crete array of film
-  let array = [];
+  let array = []; // Create array
   let elementTable = document.createElement("table") // table creation
-  elementTable.id = "table";
-  document.body.appendChild(elementTable)
+  document.body.appendChild(elementTable) // I add in body
 
   let elementTableHead = document.createElement("thead") // T header creation
-  elementTable.appendChild(elementTableHead)
+  elementTable.appendChild(elementTableHead) // I add in a table
 
   let elementTableHeadTR = document.createElement("tr") // tr title
-  elementTableHead.appendChild(elementTableHeadTR)
+  elementTableHead.appendChild(elementTableHeadTR) // I add Tr in a thead
 
   let elementTableBody = document.createElement("tbody") // create tbody in table
-  elementTable.appendChild(elementTableBody)
+  elementTable.appendChild(elementTableBody) // I add tbody in elementTable
 
   let elementCourant;
   let elementCourant2;
@@ -57,11 +56,11 @@ function createTableOfArray(arrayMain) { // Crete array of film
   let k = 0;
 
   elementCourant = arrayMain[0]; // The first line of Array
-  while (i < elementCourant.length) {
-    elementTableHeadTH = document.createElement("th")
-    elementTableHeadTH.textContent = elementCourant[i]
-    elementTableHeadTR.appendChild(elementTableHeadTH)
-    i++
+  while (i < elementCourant.length) { // time that i is smaller than the size of the first line
+    elementTableHeadTH = document.createElement("th")// Create Th
+    elementTableHeadTH.textContent = elementCourant[i] //retrieved the index element i in the text Content
+    elementTableHeadTR.appendChild(elementTableHeadTH) // add in HeadTR
+    i++ // i +1
   }
 
   elementCourant2 = arrayMain[j] // Processing of the current element
